@@ -1,0 +1,9 @@
+.head{
+    display: flex;
+    background-color: blue;
+    color: red;
+    padding: 15px;
+    list-style: none;
+    gap: 80px;
+    
+}
