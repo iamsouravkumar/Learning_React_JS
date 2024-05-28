@@ -24,9 +24,11 @@ function App() {
       setMode('dark')
       document.body.style.backgroundColor='black'
       document.body.style.color='white'
+      document.title='TextUtils - Dark Mode'
     }
     else{
       setMode('dark')
+      document.title='TextUtils - Light Mode'
     }
   }
   return (
