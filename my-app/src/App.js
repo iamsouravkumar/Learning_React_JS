@@ -18,11 +18,22 @@ function App() {
      setAlert (null)
     }, 1500);
   }
+  const [mode, setMode] = useState('light')
+  const toggleMode = ()=>{
+    if(mode === 'light'){
+      setMode('dark')
+      document.body.style.backgroundColor='black'
+      document.body.style.color='white'
+    }
+    else{
+      setMode('dark')
+    }
+  }
   return (
     <>
-<Navbar title="TextUtils2" about="About Us"/>
-<Alert alert={alert}/>
-<TextForm heading="Enter the text below to analyze" showAlert={showAlert}/>
+<Navbar title="TextUtils2" about="About Us" mode={mode} toggleMode={toggleMode}/>
+<Alert alert={alert} mode={mode}/>
+<TextForm heading="Enter the text below to analyze" mode={mode} showAlert={showAlert}/>
 {/* <About/> */}
 </>
   );
