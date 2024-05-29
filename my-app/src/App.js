@@ -4,7 +4,7 @@ import propTypes from 'prop-types'
 import TextForm from './components/TextForm';
 import { useState } from 'react';
 import Alert from './components/Alert';
-import About from './components/About';
+// import About from './components/About';
 import React from "react";
 // import {
 //   BrowserRouter as Router,
@@ -17,38 +17,40 @@ import React from "react";
 
 function App() {
   const [alert, setAlert] = useState(null)
-  const showAlert = (type, message )=>{
+  const showAlert = (type, message) => {
     setAlert({
       type: type,
       msg: message
     })
     setTimeout(() => {
-     setAlert (null)
+      setAlert(null)
     }, 1500);
   }
   const [mode, setMode] = useState('light')
-  const toggleMode = ()=>{
-    if(mode === 'light'){
+  const toggleMode = () => {
+    if (mode === 'light') {
       setMode('dark')
-      document.body.style.backgroundColor='black'
-      document.body.style.color='white'
+      document.body.style.backgroundColor = '#0e101a'
+      document.body.style.color = 'white'
+
     }
-    else if(mode === 'dark'){
+    else if (mode === 'dark') {
       setMode('light')
-      document.body.style.backgroundColor='white'
-      document.body.style.color='black'
+      document.body.style.backgroundColor = 'white'
+      document.body.style.color = 'black'
+
     }
-    else{
+    else {
       setMode('')
     }
   }
   return (
     <>
-<Navbar title="TextUtils2" about="About" mode={mode} toggleMode={toggleMode}/>
-<Alert alert={alert} mode={mode}/>
-<TextForm heading="Try TextUtils - Word and Character Counter, Remove Extra Spaces." mode={mode} showAlert={showAlert}/>
-<About mode={mode}/>
-{/* <Router>
+      <Navbar title="TextUtils" about="About" mode={mode} toggleMode={toggleMode} />
+      <Alert alert={alert} mode={mode} />
+      <TextForm heading="Try TextUtils - Word Counter, Character Counter, Remove Extra Spaces." mode={mode} showAlert={showAlert} />
+      {/* <About mode={mode}/> */}
+      {/* <Router>
 <Navbar title="TextUtils2" about="About Us" mode={mode} toggleMode={toggleMode}/>
   <div className='my-container'>
 <Switch>
@@ -63,13 +65,13 @@ function App() {
         </Switch>
         </div>
         </Router> */}
-</>
+    </>
   );
 }
 
 Navbar.propTypes = {
   title: propTypes.string,
-  about: propTypes.string 
+  about: propTypes.string
 }
 
 export default App;
