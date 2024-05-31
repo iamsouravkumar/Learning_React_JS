@@ -10,7 +10,7 @@ export class NewsCard extends Component {
           <img src={!imageUrl ? "https://img.etimg.com/thumb/msid-110535246,width-1200,height-630,imgsize-267022,overlay-etmarkets/photo.jpg" : imageUrl} className="card-img-top" alt="..." />
           <div className="card-body"> <h5 className='card-title'>{title}</h5>
             <p className="card-text">{description}</p>
-            <p className="card-text"><small className="text-muted">By {!author ? 'unknown' : author} on {new Date(date).toGMTString()}</small></p>
+            <p className="card-text"><small className="text-danger">By {!author ? 'unknown' : author} on {new Date(date).toGMTString()}</small></p>
             <a rel="noreferrer" href={newsUrl} target='_blank' className="btn btn-sm btn-dark">Read More</a>
           </div>
         </div>
