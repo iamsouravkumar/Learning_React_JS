@@ -11,14 +11,38 @@ const App = () => {
   const pageSize = 12;
   const apikey = process.env.REACT_APP_NEWS_API
   const [progress, setProgress] = useState(0)
+  const [mode, setMode] = useState('light')
+  const [text, setText] = useState('Enable Dark Mode')
+  const toggleMode = () => {
+    if (mode === 'light') {
+      setMode('dark')
+      document.body.style.backgroundColor = 'black'
+      document.body.style.color = 'white'
+      if (text === 'Enable Dark Mode') {
+        setText('Disable Dark Mode')
+      }
+    }
+
+    else if (mode === 'dark') {
+      setMode('light')
+      document.body.style.backgroundColor = 'white'
+      document.body.style.color = 'black'
+      if (text === 'Disable Dark Mode') {
+        setText('Enable Dark Mode')
+      }
+    }
+    else {
+      setMode('light')
+    }
+  }
 
   return (
     <div>
       <Router>
-        <Navbar />
+        <Navbar mode={mode} toggleMode={toggleMode} />
         <LoadingBar
           color='#f11946'
-          progress={progress}
+          progress={progress} mode={mode}
         />
         <Switch>
           <Route exact path="/"><News setProgress={setProgress} apikey={apikey} key='general' pageSize={pageSize} country='in' category='general' /></Route>

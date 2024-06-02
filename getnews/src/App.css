@@ -5,7 +5,7 @@
 h1 {
     font-weight: 600;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: lavender;
+    /* background-color: lavender; */
     margin-top: 10vh;
     text-align: center;
     padding: 2vh;
