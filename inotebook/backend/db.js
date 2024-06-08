@@ -5,9 +5,6 @@ const connectToMongo = async () => {
     try {
         mongoose.set('strictQuery', false)
         await mongoose.connect(mongoURI, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true //node --trace-warnings ...
-
         }).then(() => {
             console.log('Connected to MongoDB');
         }).catch(err => {
