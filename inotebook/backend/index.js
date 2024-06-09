@@ -10,6 +10,6 @@ app.use('/api/auth', require('./routes/auth'))
 app.use('/api/note', require('./routes/note'))
 
 app.listen(port, () => {
-  console.log(`Example app running on port ${port}`)
+  console.log(`iNoteBok backend running on port ${port}`)
 })
 
