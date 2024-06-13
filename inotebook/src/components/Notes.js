@@ -38,11 +38,11 @@ const Notes = (props) => {
             <button ref={ref} type="button" className="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Edit Note
             </button>
-            <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div className=" add-n modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h1 className="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                            <h1 className="modal-title fs-5" id="exampleModalLabel">Update Note</h1>
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         {/*modal body st */}
@@ -71,7 +71,7 @@ const Notes = (props) => {
                 </div>
             </div>
             <div className='row my-3'>
-                <h2 className='text-center'>Your Notes</h2>
+                <h2 className='note text-center'>Your Notes</h2>
                 <div className='container text-center'>
                     <h3>{notes.length === 0 && 'No Notes to Display'}</h3>
                 </div>

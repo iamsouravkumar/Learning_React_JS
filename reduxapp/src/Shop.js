@@ -14,9 +14,9 @@ const Shop = () => {
             {/* <button className="btn btn-primary mx-2" onClick={()=>{dispatch(actionCreators.withdrawMoney(100))}}>-</button>
             Your Updated Balance
             <button className="btn btn-primary mx-2" onClick={()=>{dispatch(actionCreators.depositMoney(100))}}>+</button> */}
-            <button className="btn btn-primary mx-2" onClick={()=>{withdrawMoney(100)}}>-</button>
+            <button className="btn btn-primary mx-2" onClick={()=>{withdrawMoney(1000)}}>-</button>
             Your Updated Balance is : {Balance}
-            <button className="btn btn-primary mx-2" onClick={()=>{depositMoney(100)}}>+</button>
+            <button className="btn btn-primary mx-2" onClick={()=>{depositMoney(1000)}}>+</button>
         </div>
     )
 }

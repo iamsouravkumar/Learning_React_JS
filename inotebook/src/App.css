@@ -1,6 +1,28 @@
 .App {
   text-align: center;
 }
-body{
+/* .navbar{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} */
+
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.app {
+  background-color: antiquewhite;
+}
+
+.add {
+  font-family: cursive;
+  background-color: aliceblue;
+}
+
+.add-n {
+  font-family: cursive;
+}
+
+.note {
+  background-color: antiquewhite;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
